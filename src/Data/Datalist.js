@@ -8,7 +8,16 @@ const user = [
 
     role: "MID ARCHITECT",
 
-    skills: ["INTEROAR DESIGN", "3D PRINTING", "PHOTOGRAPHY"],
+
+    bio: `Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    Dicta incidunt nobis rem voluptates magnam, ex
+    tenetur necessitatibus accusantium nihil nemo. Animi, maxime
+    corrupti Numquam nam ut dicta quia unde fuga.`,
+
+    skills: {
+      "skillNames" : ["INTEROAR DESIGN", "3D PRINTING","PHOTOGRAPHY"],
+      "skillLabel" : [78,89,70]
+  },
 
     mail: "akashsinha544@gmail.com",
 
@@ -34,11 +43,21 @@ const user = [
       },
     ],
 
-    lang: ["English", "German", "Italian"],
+    lang: {
+      "english" : 65,
+      "italian" : 90,
+      "german": 70
+
+    },
 
     exp: [
       {
         degree: "JUNIOR ARCHITECT",
+
+        des: ` Worked on marketing campaigns. 
+        Handled multiple digital accounts. 
+        Created digital marketing campaigns. 
+        Assisted the head designer.`,
 
         year: "2018",
       },
@@ -46,11 +65,25 @@ const user = [
       {
         degree: "PROJECT MANAGER",
 
+
+        des: ` Worked on marketing campaigns. 
+        Handled multiple digital accounts. 
+        Created digital marketing campaigns. 
+        Assisted the head designer.`,
+
+
         year: "2018",
       },
 
       {
         degree: "MID LEVEL ARCHITECT",
+
+
+        des: ` Worked on marketing campaigns.
+        Handled multiple digital accounts. 
+        Created digital marketing campaigns. 
+        Assisted the head designer.`,
+
 
         year: "2018",
       },

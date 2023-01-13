@@ -19,11 +19,10 @@ function App() {
                 <div className="myBio">
                   {" "}
                   <p>
+
+                    {value.bio}
                     {" "}
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.{" "}
-                    <br /> Dicta incidunt nobis rem voluptates magnam, <br /> ex
-                    tenetur necessitatibus accusantium nihil nemo. Animi, maxime
-                    corrupti <br /> Numquam nam ut dicta quia unde fuga.
+                    
                   </p>
                 </div>
 
@@ -36,24 +35,24 @@ function App() {
               </p>
 
               <div style={{ marginBottom: "6px", marginTop: "13px" }}>
-                <h3 className="skill1">{value.skills[0]}</h3>
+                <h3 className="skill1">{value.skills.skillNames[0]}</h3>
               </div>
               <div class="progress">
-                <div class="bar one"> 75%</div>
+                <div class="bar one"> {value.skills.skillLabel[0]}%</div>
               </div>
 
               <div style={{ marginBottom: "6px", marginTop: "13px" }}>
-                <h3 className="skill1">{value.skills[0]}</h3>
+                <h3 className="skill1">{value.skills.skillNames[1]}</h3>
               </div>
               <div class="progress">
-                <div class="bar two"> 90%</div>
+                <div class="bar two"> {value.skills.skillLabel[1]}%</div>
               </div>
 
               <div style={{ marginBottom: "6px", marginTop: "13px" }}>
-                <h3 className="skill1">{value.skills[0]}</h3>
+                <h3 className="skill1">{value.skills.skillNames[2]}</h3>
               </div>
               <div class="progress">
-                <div class="bar three"> 65%</div>
+                <div class="bar three"> {value.skills.skillLabel[2]}%</div>
               </div>
 
               <h3 className="email">
@@ -92,26 +91,26 @@ function App() {
               <div className="lang1">
                 <div
                   role="progressbar1"
-                  aria-valuenow="65"
+                  aria-valuenow={value.lang.english}
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  style={{ "--value": "65" }}
+                  style={{ "--value": value.lang.english }}
                 ></div>
 
                 <div
                   role="progressbar2"
-                  aria-valuenow="65"
+                  aria-valuenow={value.lang.italian}
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  style={{ "--value": "95" }}
+                  style={{ "--value": value.lang.italian}}
                 ></div>
 
                 <div
                   role="progressbar3"
-                  aria-valuenow="65"
+                  aria-valuenow={value.lang.german}
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  style={{ "--value": "75" }}
+                  style={{ "--value": value.lang.german }}
                 ></div>
               </div>
 
@@ -158,10 +157,8 @@ function App() {
                     <h3 className="exp3">
                       {k.degree} <br />
                       <p className="words">
-                        Worked on marketing campaigns. <br />
-                        Handled multiple digital accounts. <br />
-                        Created digital marketing campaigns. <br />
-                        Assisted the head designer.
+                        {k.des}
+                        
                       </p>
                     </h3>{" "}
                     <h3>{k.year}</h3>
