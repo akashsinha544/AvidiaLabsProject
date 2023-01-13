@@ -1,38 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
+  display: flex;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 35%;
+
+  height: 1142px;
+
+  background-color: rgb(212, 236, 236);
+  margin-left: 46px;
+  margin-top: 30px;
+}
+
+.pic {
+  width: 264px;
+  height: 241px;
+  border-radius: 50%;
+  padding-right: 20px;
+  margin-left: 79px;
+  margin-top: 43px;
+}
+
+.myName {
+  margin-left: 86px;
+  padding-top: 31px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+.role {
+  margin-left: 88px;
+  padding-top: 11px;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.myBio {
+  margin-top: 29px;
+}
+.me {
+  font-size: large;
+  margin-top: 84px;
+  padding-left: 81px;
+}
+
+.skill1 {
+  margin-top: 44px;
+  margin-left: 79px;
+}
+
+.email {
+  margin-left: 76px;
+  margin-top: 33px;
+  line-height: 39px;
+}
+
+.mymail {
+  margin-left: 2px;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.phone {
+  margin-left: 76px;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.coll{
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 41%;
+  margin-left: 108px;
+}
+
+.mainEdu {
+  margin-bottom: 27px;
+  padding-top: 47px;
+  line-height: 35px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.edu {
+  font-size: medium;
+  line-height: 35px;
+}
+
+.edu2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 29px;
+}
+
+.lang {
+  margin-bottom: 27px;
+  padding-top: 47px;
+  line-height: 35px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.divLang {
+  display: flex;
+  flex-direction: row;
+  gap: 104px;
+  margin-top: 28px;
+}
+
+.lang1 {
+  font-size: 23px;
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 37px;
+}
+
+.exp {
+  margin-top: 83px;
+}
+
+.words {
+  font-size: medium;
+  font-weight: 300;
+  font-family: sans-serif;
+  line-height: 20px;
+  margin-top: 12px;
+  font-weight: 300;
+}
+
+.exp2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 29px;
+}
+
+.exp3 {
+  font-size: medium;
+  line-height: 35px;
+}
+
+b {
+  font-size: 31px;
+}
+
+.progress {
+  border: 1px solid #b0b0b0;
+  width: 15em;
+  border-radius: 4px;
+  box-shadow: 0 0 3px #b0b0;
+
+  height: 169px;
+  margin-left: 76px;
+  margin-top: 14px;
+}
+
+.bar {
+  width: 20em;
+  background: forestgreen;
+  box-shadow: inset 0px 12px 1.7px #ffffff33;
+  border-radius: 3px;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bar.one {
+  background: rgb(68 126 117);
+  width: 80%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bar.two {
+  background: rgb(68 126 117);
+  width: 93%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bar.three {
+  background: rgb(68 126 117);
+  width: 60%;
+}
+
+div[role="progressbar1"] {
+  --size: 8rem;
+  --fg: #9933338c;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  margin-right: 48px;
+  place-items: center;
+  background: radial-gradient(
+      closest-side,
+      white 80%,
+      transparent 0 99.9%,
+      white 0
+    ),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+div[role="progressbar1"]::before {
+  content: "English";
+}
+
+div[role="progressbar2"] {
+  --size: 8rem;
+  --fg: #9933338c;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  margin-right: 48px;
+  place-items: center;
+  background: radial-gradient(
+      closest-side,
+      white 80%,
+      transparent 0 99.9%,
+      white 0
+    ),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+div[role="progressbar2"]::before {
+  content: "German";
+}
+
+div[role="progressbar3"] {
+  --size: 8rem;
+  --fg: #9933338c;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  margin-right: 48px;
+  place-items: center;
+  background: radial-gradient(
+      closest-side,
+      white 80%,
+      transparent 0 99.9%,
+      white 0
+    ),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+div[role="progressbar3"]::before {
+  content: "Italian";
+}
+
+
+@media screen and (max-width:450px){
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 35%;
+    height: 1208px;
+    background-color: rgb(212, 236, 236);
+    margin-left: 46px;
+    margin-top: 30px;
+
+}
+
+
+
+.edu2 {
+  width: 81%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 29px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.exp2 {
+  width: 86%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 29px;
+}
 }
